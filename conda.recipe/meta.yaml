@@ -6,7 +6,8 @@ build:
     number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 source:
-    path: ../
+    git_url: ../
+    git_tag: test-conda
 
 requirements:
   build:
@@ -23,9 +24,9 @@ requirements:
     - python-dateutil
     - pytz
 
-test:
-  imports:
-    - pandas
+#test:
+#  imports:
+#    - pandas
 
 about:
   home: http://pandas.pydata.org
